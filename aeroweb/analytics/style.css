@@ -1,0 +1,187 @@
+* {
+    font-family: "Saira", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(189, 188, 188);
+}
+
+.logoImage {
+    height: 8vh;
+}
+
+.dropdown-menu li {
+    margin-inline: 1rem;
+}
+.dropdown-item:hover,
+.homeBtn:hover {
+    cursor: pointer;
+}
+
+.dataDiv {
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    transform: translateY(-10vh);
+    opacity: 0;
+    transition:
+        transform 0.5s ease-in-out,
+        opacity 0.5s ease-in-out,
+        filter 0.5s ease-in-out;
+}
+
+.tableHeadingRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.tableHeadingRow > div {
+    padding: 1rem;
+    background-color: #2b3035;
+}
+.tableHeading {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    border: 1px solid grey;
+    border-bottom: none;
+}
+.totalUsers {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid grey;
+}
+
+.dataLine:hover {
+    background-color: #2b3035;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+thead {
+    background-color: #2b3035;
+    text-align: center;
+}
+tbody {
+    text-align: center;
+}
+th,
+td {
+    border: 1px solid grey;
+}
+
+.uname {
+    color: whitesmoke;
+    cursor: pointer;
+}
+.uname:hover {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.userCard {
+    width: 35vw;
+    height: 85vh;
+    background-color: #2b3035;
+    position: fixed;
+    top: 13vh;
+    left: 0vw;
+    transform: translateX(-75vw);
+    padding: 2vw;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+    transition: transform 0.5s ease-in-out;
+}
+.userCard h3 {
+    text-align: center;
+}
+.userCard > div {
+    border-bottom: 1px solid grey;
+    margin-bottom: 2vh;
+}
+.controlArrow {
+    padding: 2vh;
+    border-radius: 30px;
+}
+.controlArrow:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 576px) {
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+    .dataDiv {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    /* .totalUsers{
+        margin-bottom: 0;
+        border-bottom: none;
+    } */
+
+    .userCard {
+        height: 85vh;
+        width: 75vw;
+        padding: 2vh;
+    }
+}
+
+
+
+/**************************Feedback page CSS*********************/
+.feedbackContentDiv{
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.feedHeading{
+    /* display: flex;
+    justify-content: center; */
+    
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.feedcard{
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+}
+.feedcardHead{
+    display: flex;
+    justify-content: space-between;
+}
+.resolveUndoBtn{
+    color: whitesmoke;
+    /* border: 1px solid whitesmoke; */
+    border: none;
+}
+.resolveUndoBtn.resolve{
+    background-color: rgb(64, 133, 64);
+
+}
+.resolveUndoBtn.undo{
+    background-color: grey;
+}
+.feedTimestampDiv{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}

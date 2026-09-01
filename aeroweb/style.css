@@ -1,0 +1,489 @@
+* {
+    font-family: "Gruppo", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+
+    color: white;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(189, 188, 188);
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* background-color: red; */
+}
+
+nav img {
+    height: 8vh;
+    width: 8vh;
+}
+
+.title {
+    margin: auto;
+    font-size: 1.8rem;
+    font-family: "Gruppo", sans-serif;
+}
+
+.inputbox {
+    width: 25vw;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: grey;
+    z-index: 1;
+    position: absolute;
+    left: 70vw;
+    display: none;
+    transition: all 1s ease-in-out 1s;
+}
+
+#search {
+    padding-left: 1vw;
+}
+
+.imagebox {
+    width: 100vw;
+    height: 80vh;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagebox > img {
+    width: 75vw;
+    height: 10vw;
+}
+
+.expand_more {
+    height: 15vh;
+    animation: SlidingDownAnimation 2s ease-in-out infinite;
+}
+
+.expand_more:hover{
+    animation: none;
+}
+
+#skipScroll {
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.bookCard {
+    width: 60vw;
+    height: 35vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.463);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.semesters {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.clmn {
+    display: flex;
+}
+
+.oddSem {
+    justify-content: start;
+}
+
+.evenSem {
+    justify-content: end;
+}
+
+.semCard {
+    width: 48vw;
+    height: 60vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.463);
+}
+
+.genCard img {
+    border-radius: 10px;
+    object-fit: contain;
+    border: 1px solid rgba(128, 128, 128, 0.655);
+}
+
+.genCard:hover > img {
+    transform: scale(1.01);
+    box-shadow:
+        5px 5px 20px rgba(128, 128, 128, 0.463),
+        -5px -5px 20px rgba(128, 128, 128, 0.463);
+    transition:
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+}
+
+.footer {
+    width: 100%;
+    height: 8vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid rgba(128, 128, 128, 0.466) 1px;
+}
+
+.footer > div {
+    font-size: 1.2rem;
+    border: 1px solid rgba(245, 245, 245, 0.466);
+    border-radius: 20px;
+    padding: 0.2rem 1rem;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.footer > div:hover {
+    background-color: rgba(245, 245, 245, 0.196);
+    color: rgb(245, 245, 245);
+    border-radius: 20px;
+}
+
+.formdiv {
+    background-color: whitesmoke;
+    margin-top: 15vh;
+    border-radius: 20px;
+}
+
+.formname {
+    display: flex;
+    font-size: 2rem;
+}
+
+.befAftFeedBtn {
+    display: none;
+    flex: 1;
+}
+
+.befAftFeedBtn::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#feedbtn {
+    width: 65vh;
+    text-align: center;
+    border: 1px solid rgba(245, 245, 245, 0.466);
+    border-radius: 20px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+#feedbtn:hover {
+    /* color: black; */
+    background-color: rgba(245, 245, 245, 0.196);
+    cursor: pointer;
+}
+
+.feedform {
+    display: none;
+    flex-direction: column;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+}
+
+.feedform > label {
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.input {
+    border-radius: 20px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.2rem;
+    border: 2px solid black;
+}
+
+.input:focus {
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.509);
+}
+
+#submitbtn {
+    font-size: 1.4rem;
+    width: 10vw;
+    width: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 5vh;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 600;
+}
+
+#submitbtn:hover {
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px gray;
+}
+
+.textarea {
+    height: 5rem;
+}
+
+@media only screen and (max-width: 375px) {
+    .title {
+        font-size: 1rem;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    #skipScroll {
+        padding-bottom: 6vh;
+    }
+
+    .bookCard {
+        width: 70vw;
+        height: 15vh;
+    }
+
+    .books {
+        margin-bottom: 2vh;
+    }
+
+    .semCard {
+        height: 25vh;
+    }
+
+    .heading1 {
+        font-size: 2rem;
+    }
+
+    .expand_more {
+        height: 8vh;
+    }
+
+    #feedbtn {
+        font-size: 1.2rem;
+        width: 30vh;
+    }
+
+    .feedform {
+        width: 70vw;
+    }
+
+    .input {
+        font-size: 1rem;
+    }
+
+    .feedform > label {
+        font-size: 1.2rem;
+    }
+
+    #submitbtn {
+        font-size: 1.2rem;
+    }
+
+    .footer > div {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 576px) {
+    .title {
+        font-size: 1.3rem;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    #skipScroll {
+        padding-bottom: 6vh;
+    }
+
+    .bookCard {
+        width: 70vw;
+        height: 15vh;
+    }
+
+    .books {
+        margin-bottom: 4vh;
+    }
+
+    .semCard {
+        height: 30vh;
+    }
+
+    .heading1 {
+        font-size: 3rem;
+    }
+
+    .expand_more {
+        height: 8vh;
+    }
+
+    #feedbtn {
+        font-size: 1.5rem;
+        width: 40vh;
+    }
+
+    .feedform {
+        width: 70vw;
+    }
+
+    .input {
+        font-size: 1.1rem;
+    }
+
+    .feedform > label {
+        font-size: 1.3rem;
+    }
+
+    #submitbtn {
+        font-size: 1.3rem;
+    }
+
+    .footer > div {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .semCard {
+        height: 50vh;
+    }
+
+    .heading1 {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    #skipScroll {
+        padding-bottom: 6vh;
+    }
+
+    .bookCard {
+        width: 65vw;
+        height: 25vh;
+    }
+
+    .books {
+        margin-bottom: 6vh;
+    }
+
+    #feedbtn {
+        font-size: 1.6rem;
+        width: 60vh;
+    }
+
+    .feedform {
+        width: 70vw;
+    }
+
+    .input {
+        font-size: 1.2rem;
+    }
+
+    .feedform > label {
+        font-size: 1.4rem;
+    }
+
+    #submitbtn {
+        font-size: 1.4rem;
+    }
+}
+
+.infotrain {
+    background-color: rgb(245, 245, 245);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.infotext {
+    background-color: whitesmoke;
+    color: rgb(104, 174, 224);
+    animation: blinkingAnimation 5s ease-in-out infinite;
+}
+
+.infotext:hover {
+    animation: none;
+}
+
+@keyframes blinkingAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes SlidingDownAnimation{
+    0%{
+        transform: translateY(0);
+    }
+    80%{
+        transform: translateY(1vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
